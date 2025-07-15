@@ -1,0 +1,55 @@
+/* Mobile App Loading Animations */
+.mobile-loading-shimmer {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+.mobile-loading-pulse {
+  background: linear-gradient(45deg, #FD9D00, #FD7E14);
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+.mobile-loading-spinner {
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #FD9D00;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin: 20px auto;
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 1; }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Professional mobile app loading states */
+.app-store-loading {
+  background: linear-gradient(90deg, #f8f9fa 25%, #e9ecef 50%, #f8f9fa 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.8s infinite;
+  border-radius: 8px;
+  width: 160px;
+  height: 48px;
+}
+
+.google-play-loading {
+  background: linear-gradient(90deg, #f1f3f4 25%, #e8eaed 50%, #f1f3f4 75%);
+  background-size: 200% 100%;
+  animation: shimmer 2.2s infinite;
+  border-radius: 8px;
+  width: 160px;
+  height: 48px;
+}

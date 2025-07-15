@@ -66,7 +66,7 @@ const HeroSection = () => {
                   src="https://xnbnrzqbtpvtvwfhvjba.supabase.co/storage/v1/object/public/images//google-play.png"
                   alt={t('downloadGooglePlay')}
                   className="w-[160px] h-auto transition-all duration-300 transform group-hover:scale-105 rounded-lg"
-                  placeholderSrc="data:image/jpeg;base64,/9j/4AAQSkZJRg..."
+                  placeholderSrc="/animated-gifs/mobile-shimmer.gif"
                 />
               </Link>
               <Link to="/app-download" className="group block">
@@ -75,7 +75,7 @@ const HeroSection = () => {
                   src="https://xnbnrzqbtpvtvwfhvjba.supabase.co/storage/v1/object/public/images//app-store.png"
                   alt={t('downloadAppStore')}
                   className="w-[160px] h-auto transition-all duration-300 transform group-hover:scale-105 group-hover:shadow-lg rounded-lg"
-                  placeholderSrc="data:image/jpeg;base64,/9j/4AAQSkZJRg..."
+                  placeholderSrc="/animated-gifs/pulse-loading.gif"
                 />
               </Link>
             </motion.div>
