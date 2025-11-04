@@ -158,7 +158,7 @@ const HowItWorksSection = () => {
               >
                 <img
                   alt="SawaRI App Interface"
-                  src="https://xnbnrzqbtpvtvwfhvjba.supabase.co/storage/v1/object/public/images//main.gif"
+                  src="/assets/mock-portrait.png"
                   className="w-full h-full rounded-[2.5rem] object-cover"
                 />
               </motion.div>

@@ -15,7 +15,7 @@ const HeroSection = () => {
   };
 
   return (
-    <div className="relative bg-gradient-to-b from-[#FD9D00]/5 via-[#FD9D00]/10 to-white pt-32 pb-16 sm:pt-32 overflow-hidden">
+    <div className="relative bg-gradient-to-b from-[#FD9D00]/5 via-[#FD9D00]/10 to-white pt-20 pb-12 sm:pt-32 sm:pb-20 overflow-hidden">
       <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
       <motion.div 
         initial={{ opacity: 0 }}
@@ -23,11 +23,13 @@ const HeroSection = () => {
         transition={{ duration: 0.8 }}
         className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative"
       >
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        {/* Desktop Layout: Left Text, Right Mock */}
+        <div className="hidden lg:grid lg:grid-cols-2 gap-12 items-center">
+          {/* Left Content */}
           <motion.div 
             initial="initial"
             animate="animate"
-            className="text-center lg:text-left z-10"
+            className="lg:col-span-1 text-left z-10"
           >
             <motion.div variants={fadeInUp} className="inline-block">
               <span className="inline-flex items-center px-4 py-1.5 rounded-full text-sm font-medium bg-[#FD9D00]/10 text-[#FD9D00] mb-6 hover:bg-[#FD9D00]/20 transition-colors duration-200">
@@ -44,28 +46,28 @@ const HeroSection = () => {
             
             <motion.h1 
               variants={fadeInUp}
-              className="text-4xl sm:text-6xl font-bold text-gray-900 leading-tight tracking-tight mb-6 bg-clip-text text-transparent bg-gradient-to-r from-[#FD9D00] to-[#FD7E14]"
+              className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight tracking-tight mb-4 bg-clip-text text-transparent bg-gradient-to-r from-[#FD9D00] to-[#FD7E14]"
             >
               {t('heroTitle')}
             </motion.h1>
             
             <motion.p 
               variants={fadeInUp}
-              className="mt-6 text-xl text-gray-600 leading-relaxed opacity-90"
+              className="text-base sm:text-lg lg:text-lg text-gray-600 leading-relaxed opacity-90 mb-8"
             >
               {t('heroSubtitle')}
             </motion.p>
             
             <motion.div 
               variants={fadeInUp}
-              className="flex flex-row sm:flex-row gap-6 justify-center lg:justify-start mt-12"
+              className="flex flex-col sm:flex-row gap-4"
             >
               <Link to="/app-download" className="group block">
                 <LazyLoadImage
                   effect="blur"
                   src="https://xnbnrzqbtpvtvwfhvjba.supabase.co/storage/v1/object/public/images//google-play.png"
                   alt={t('downloadGooglePlay')}
-                  className="w-[160px] h-auto transition-all duration-300 transform group-hover:scale-105 rounded-lg"
+                  className="h-12 w-auto transition-all duration-300 transform group-hover:scale-105"
                   placeholderSrc="data:image/jpeg;base64,/9j/4AAQSkZJRg..."
                 />
               </Link>
@@ -74,24 +76,99 @@ const HeroSection = () => {
                   effect="blur"
                   src="https://xnbnrzqbtpvtvwfhvjba.supabase.co/storage/v1/object/public/images//app-store.png"
                   alt={t('downloadAppStore')}
-                  className="w-[160px] h-auto transition-all duration-300 transform group-hover:scale-105 group-hover:shadow-lg rounded-lg"
+                  className="h-12 w-auto transition-all duration-300 transform group-hover:scale-105 group-hover:shadow-lg"
                   placeholderSrc="data:image/jpeg;base64,/9j/4AAQSkZJRg..."
                 />
               </Link>
             </motion.div>
           </motion.div>
-          
+
+          {/* Center Mobile Mock */}
           <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative lg:absolute lg:right-0 lg:w-1/2 lg:h-full"
+            className="lg:col-span-1 flex justify-center"
           >
             <LazyLoadImage
               effect="blur"
-              src="https://xnbnrzqbtpvtvwfhvjba.supabase.co/storage/v1/object/public/images//main.gif"
+              src="/assets/mock-left.png"
               alt={t('appInterface')}
-              className="w-full h-auto rounded-2xl transform hover:scale-105 transition-transform duration-500"
+              className="w-72 h-auto rounded-3xl transform hover:scale-105 transition-transform duration-500"
+            />
+          </motion.div>
+        </div>
+
+        {/* Mobile/Tablet Layout */}
+        <div className="lg:hidden">
+          <motion.div 
+            initial="initial"
+            animate="animate"
+            className="text-center z-10 mb-12"
+          >
+            <motion.div variants={fadeInUp} className="inline-block">
+              <span className="inline-flex items-center px-4 py-1.5 rounded-full text-sm font-medium bg-[#FD9D00]/10 text-[#FD9D00] mb-6 hover:bg-[#FD9D00]/20 transition-colors duration-200">
+                🎉 {t('comingSoon')} 
+                <motion.span 
+                  className="ml-2"
+                  animate={{ x: [0, 4, 0] }}
+                  transition={{ repeat: Infinity, duration: 1.5 }}
+                >
+                  →
+                </motion.span>
+              </span>
+            </motion.div>
+            
+            <motion.h1 
+              variants={fadeInUp}
+              className="text-3xl sm:text-4xl font-bold text-gray-900 leading-tight tracking-tight mb-4 bg-clip-text text-transparent bg-gradient-to-r from-[#FD9D00] to-[#FD7E14]"
+            >
+              {t('heroTitle')}
+            </motion.h1>
+            
+            <motion.p 
+              variants={fadeInUp}
+              className="text-base sm:text-lg text-gray-600 leading-relaxed opacity-90 mb-8"
+            >
+              {t('heroSubtitle')}
+            </motion.p>
+            
+            <motion.div 
+              variants={fadeInUp}
+              className="flex flex-col sm:flex-row gap-4 justify-center"
+            >
+              <Link to="/app-download" className="group block">
+                <LazyLoadImage
+                  effect="blur"
+                  src="https://xnbnrzqbtpvtvwfhvjba.supabase.co/storage/v1/object/public/images//google-play.png"
+                  alt={t('downloadGooglePlay')}
+                  className="h-12 w-auto transition-all duration-300 transform group-hover:scale-105 mx-auto"
+                  placeholderSrc="data:image/jpeg;base64,/9j/4AAQSkZJRg..."
+                />
+              </Link>
+              <Link to="/app-download" className="group block">
+                <LazyLoadImage
+                  effect="blur"
+                  src="https://xnbnrzqbtpvtvwfhvjba.supabase.co/storage/v1/object/public/images//app-store.png"
+                  alt={t('downloadAppStore')}
+                  className="h-12 w-auto transition-all duration-300 transform group-hover:scale-105 group-hover:shadow-lg mx-auto"
+                  placeholderSrc="data:image/jpeg;base64,/9j/4AAQSkZJRg..."
+                />
+              </Link>
+            </motion.div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="flex justify-center"
+          >
+            <LazyLoadImage
+              effect="blur"
+              src="/assets/mock-left.png"
+              alt={t('appInterface')}
+              className="w-56 h-auto rounded-3xl transform hover:scale-105 transition-transform duration-500"
             />
           </motion.div>
         </div>

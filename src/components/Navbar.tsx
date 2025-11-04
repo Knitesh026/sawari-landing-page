@@ -86,9 +86,9 @@ const Navbar = () => {
           >
             <Link to="/" className="flex items-center">
               <img 
-                src="https://xnbnrzqbtpvtvwfhvjba.supabase.co/storage/v1/object/public/images//logo_t.png" 
+                src="/assets/SAW RI.gif" 
                 alt="SawaRI Logo" 
-                className="h-10 object-contain"
+                className="h-9 object-contain"
               />
             </Link>
           </motion.div>
