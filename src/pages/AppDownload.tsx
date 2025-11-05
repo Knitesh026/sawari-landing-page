@@ -57,21 +57,25 @@ const AppDownload = () => {
           {/* Hero Section */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-24">
             <div>
-              <span className="inline-block bg-orange-100 text-orange-800 px-4 py-1 rounded-full text-sm font-medium mb-4">
-                {t('comingSoon')}
+              <span className="inline-block bg-green-100 text-green-800 px-4 py-1 rounded-full text-sm font-medium mb-4">
+                ✨ Now Available
               </span>
               <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
                 {t('experienceMobile')}
               </h1>
               <p className="text-xl text-gray-600 mb-8">
-                {t('appDevelopmentDesc')}
+                Download SawaRI today and join thousands of happy riders and drivers. Available on both Android and iOS.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button asChild>
-                  <Link to="/waitlist">{t('joinWaitlist')}</Link>
+                <Button asChild className="bg-[#FD9D00] hover:bg-[#FD9D00]/90 text-white">
+                  <a href="https://play.google.com/store/apps/details?id=com.sawari.app" target="_blank" rel="noopener noreferrer">
+                    📱 Get on Google Play
+                  </a>
                 </Button>
                 <Button asChild variant="outline" className="border-[#FD9D00] text-[#FD9D00] hover:bg-[#FD9D00]/10">
-                  <Link to="/about">{t('learnMore')}</Link>
+                  <a href="https://apps.apple.com/app/sawari/id123456789" target="_blank" rel="noopener noreferrer">
+                    🍎 Download on App Store
+                  </a>
                 </Button>
               </div>
             </div>

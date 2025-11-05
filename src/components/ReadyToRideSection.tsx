@@ -215,7 +215,9 @@ const ReadyToRideSection: React.FC = () => {
             <div className="pt-6 flex flex-col sm:flex-row gap-4 items-center justify-center sm:justify-start">
               <motion.div whileHover={shouldReduceMotion ? {} : { scale: 1.05 }} whileTap={shouldReduceMotion ? {} : { scale: 0.95 }}>
                 <Button asChild variant="default" size="lg" className="bg-[#FD9D00] hover:bg-[#FD9D00]/90 text-white w-full sm:w-auto font-medium">
-                  <Link to="/waitlist">{t('joinWaitlist')}</Link>
+                  <a href="https://play.google.com/store/apps/details?id=com.sawari.app" target="_blank" rel="noopener noreferrer">
+                    📱 Download App
+                  </a>
                 </Button>
               </motion.div>
               <motion.div whileHover={shouldReduceMotion ? {} : { scale: 1.05 }} whileTap={shouldReduceMotion ? {} : { scale: 0.95 }}>

@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { useTranslation } from '@/hooks/useTranslation';
 import { motion } from 'framer-motion';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
@@ -32,14 +31,14 @@ const HeroSection = () => {
             className="lg:col-span-1 text-left z-10"
           >
             <motion.div variants={fadeInUp} className="inline-block">
-              <span className="inline-flex items-center px-4 py-1.5 rounded-full text-sm font-medium bg-[#FD9D00]/10 text-[#FD9D00] mb-6 hover:bg-[#FD9D00]/20 transition-colors duration-200">
-                🎉 {t('comingSoon')} 
+              <span className="inline-flex items-center px-4 py-1.5 rounded-full text-sm font-medium bg-green-100 text-green-700 mb-6 hover:bg-green-200 transition-colors duration-200">
+                ✨ Now Available 
                 <motion.span 
                   className="ml-2"
-                  animate={{ x: [0, 4, 0] }}
+                  animate={{ scale: [1, 1.2, 1] }}
                   transition={{ repeat: Infinity, duration: 1.5 }}
                 >
-                  →
+                  🚀
                 </motion.span>
               </span>
             </motion.div>
@@ -62,24 +61,34 @@ const HeroSection = () => {
               variants={fadeInUp}
               className="flex flex-col sm:flex-row gap-4"
             >
-              <Link to="/app-download" className="group block">
+              <a 
+                href="https://play.google.com/store/apps/details?id=com.sawari.app" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="group block hover:opacity-80 transition-opacity duration-300"
+              >
                 <LazyLoadImage
                   effect="blur"
                   src="https://xnbnrzqbtpvtvwfhvjba.supabase.co/storage/v1/object/public/images//google-play.png"
                   alt={t('downloadGooglePlay')}
-                  className="h-12 w-auto transition-all duration-300 transform group-hover:scale-105"
+                  className="h-12 w-auto transition-all duration-300 transform group-hover:scale-105 cursor-pointer"
                   placeholderSrc="data:image/jpeg;base64,/9j/4AAQSkZJRg..."
                 />
-              </Link>
-              <Link to="/app-download" className="group block">
+              </a>
+              <a 
+                href="https://apps.apple.com/app/sawari/id123456789" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="group block hover:opacity-80 transition-opacity duration-300"
+              >
                 <LazyLoadImage
                   effect="blur"
                   src="https://xnbnrzqbtpvtvwfhvjba.supabase.co/storage/v1/object/public/images//app-store.png"
                   alt={t('downloadAppStore')}
-                  className="h-12 w-auto transition-all duration-300 transform group-hover:scale-105 group-hover:shadow-lg"
+                  className="h-12 w-auto transition-all duration-300 transform group-hover:scale-105 group-hover:shadow-lg cursor-pointer"
                   placeholderSrc="data:image/jpeg;base64,/9j/4AAQSkZJRg..."
                 />
-              </Link>
+              </a>
             </motion.div>
           </motion.div>
 
@@ -107,14 +116,14 @@ const HeroSection = () => {
             className="text-center z-10 mb-12"
           >
             <motion.div variants={fadeInUp} className="inline-block">
-              <span className="inline-flex items-center px-4 py-1.5 rounded-full text-sm font-medium bg-[#FD9D00]/10 text-[#FD9D00] mb-6 hover:bg-[#FD9D00]/20 transition-colors duration-200">
-                🎉 {t('comingSoon')} 
+              <span className="inline-flex items-center px-4 py-1.5 rounded-full text-sm font-medium bg-green-100 text-green-700 mb-6 hover:bg-green-200 transition-colors duration-200">
+                ✨ Now Available 
                 <motion.span 
                   className="ml-2"
-                  animate={{ x: [0, 4, 0] }}
+                  animate={{ scale: [1, 1.2, 1] }}
                   transition={{ repeat: Infinity, duration: 1.5 }}
                 >
-                  →
+                  🚀
                 </motion.span>
               </span>
             </motion.div>
@@ -137,24 +146,34 @@ const HeroSection = () => {
               variants={fadeInUp}
               className="flex flex-col sm:flex-row gap-4 justify-center"
             >
-              <Link to="/app-download" className="group block">
+              <a 
+                href="https://play.google.com/store/apps/details?id=com.sawari.app" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="group block hover:opacity-80 transition-opacity duration-300"
+              >
                 <LazyLoadImage
                   effect="blur"
                   src="https://xnbnrzqbtpvtvwfhvjba.supabase.co/storage/v1/object/public/images//google-play.png"
                   alt={t('downloadGooglePlay')}
-                  className="h-12 w-auto transition-all duration-300 transform group-hover:scale-105 mx-auto"
+                  className="h-12 w-auto transition-all duration-300 transform group-hover:scale-105 mx-auto cursor-pointer"
                   placeholderSrc="data:image/jpeg;base64,/9j/4AAQSkZJRg..."
                 />
-              </Link>
-              <Link to="/app-download" className="group block">
+              </a>
+              <a 
+                href="https://apps.apple.com/app/sawari/id123456789" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="group block hover:opacity-80 transition-opacity duration-300"
+              >
                 <LazyLoadImage
                   effect="blur"
                   src="https://xnbnrzqbtpvtvwfhvjba.supabase.co/storage/v1/object/public/images//app-store.png"
                   alt={t('downloadAppStore')}
-                  className="h-12 w-auto transition-all duration-300 transform group-hover:scale-105 group-hover:shadow-lg mx-auto"
+                  className="h-12 w-auto transition-all duration-300 transform group-hover:scale-105 group-hover:shadow-lg mx-auto cursor-pointer"
                   placeholderSrc="data:image/jpeg;base64,/9j/4AAQSkZJRg..."
                 />
-              </Link>
+              </a>
             </motion.div>
           </motion.div>
 

@@ -25,14 +25,30 @@ const DownloadSection = () => {
               {t('downloadSubtitle')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 animate-zoom-in">
-              <Button variant="default" className="bg-white text-[#FD9D00] hover:bg-white/90 transform transition-all duration-300 hover:scale-105" asChild>
-                <Link to="/app-download">
+              <a 
+                href="https://play.google.com/store/apps/details?id=com.sawari.app" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                <Button variant="default" className="bg-white text-[#FD9D00] hover:bg-white/90 transform transition-all duration-300 hover:scale-105 w-full sm:w-auto">
                   <span className="flex items-center">
-                    <span className="mr-2">🚀</span>
-                    {t('getStarted')}
+                    <span className="mr-2">📱</span>
+                    Download on Google Play
                   </span>
-                </Link>
-              </Button>
+                </Button>
+              </a>
+              <a 
+                href="https://apps.apple.com/app/sawari/id123456789" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                <Button variant="default" className="bg-white text-[#FD9D00] hover:bg-white/90 transform transition-all duration-300 hover:scale-105 w-full sm:w-auto">
+                  <span className="flex items-center">
+                    <span className="mr-2">🍎</span>
+                    Download on App Store
+                  </span>
+                </Button>
+              </a>
             </div>
           </div>
           
