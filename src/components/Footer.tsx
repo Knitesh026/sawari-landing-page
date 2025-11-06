@@ -33,9 +33,9 @@ const Footer = () => {
           <div>
             <Link to="/" className="w-28 h-12 flex items-center">
               <img 
-                src="https://xnbnrzqbtpvtvwfhvjba.supabase.co/storage/v1/object/public/images//logo_t.png" 
+                src="/assets/SAW RI.gif" 
                 alt="SawaRI Logo" 
-                className="w-16 h-auto object-cover" 
+                className="w-24 h-auto object-cover" 
               />
             </Link>
             <p className="mt-4 text-gray-600">

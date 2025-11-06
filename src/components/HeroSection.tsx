@@ -101,9 +101,9 @@ const HeroSection = () => {
           >
             <LazyLoadImage
               effect="blur"
-              src="/assets/mock-left.png"
+              src="/assets/757shots_so.png"
               alt={t('appInterface')}
-              className="w-72 h-auto rounded-3xl transform hover:scale-105 transition-transform duration-500"
+              className="w-auto h-420 rounded-3xl transform hover:scale-105 transition-transform duration-500"
             />
           </motion.div>
         </div>
@@ -185,9 +185,9 @@ const HeroSection = () => {
           >
             <LazyLoadImage
               effect="blur"
-              src="/assets/mock-left.png"
+              src="/assets/hhhh.png"
               alt={t('appInterface')}
-              className="w-56 h-auto rounded-3xl transform hover:scale-105 transition-transform duration-500"
+              className="w-660 h-auto rounded-3xl transform hover:scale-105 transition-transform duration-500"
             />
           </motion.div>
         </div>

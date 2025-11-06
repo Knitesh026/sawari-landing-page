@@ -67,7 +67,7 @@ const translations = {
   rideWithUs: "Ride with us",
   localCommute: "Local Commute",
   villageConnectivity: "Village Connectivity",
-  getTheApp: "Get the SawaRI app (Coming Soon)",
+  getTheApp: "Get the SawaRI app ",
   // Driver Success
   applicationSuccess: "Application Submitted Successfully!",
   applicationSuccessDesc: "Thank you for applying to become a SawaRI driver. Our team will review your application and contact you soon.",
