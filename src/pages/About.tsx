@@ -35,7 +35,7 @@ const About = () => {
               </p>
             </div>
             <div className="transform rotate-0 transition-transform duration-300 hover:rotate-6">
-              <img alt="SawaRI Vision" src="https://xnbnrzqbtpvtvwfhvjba.supabase.co/storage/v1/object/public/images//trc.gif" className="w-[260px] h-auto drop-shadow-xl ml-[3rem]" />
+              <img alt="SawaRI Vision" src="/assets/26.png" className="w-[420px] h-auto drop-shadow-xl ml-[3rem]" />
             </div>
           </div>
           
@@ -53,7 +53,7 @@ const About = () => {
               </p>
             </div>
             <div className="transform rotate-0 transition-transform duration-300 hover:-rotate-6">
-              <img alt="SawaRI Journey" src="/assets/Image1.png" className="w-[460px] h-auto drop-shadow-xl ml-[3rem]" />
+              <img alt="SawaRI Journey" src="/assets/25.png" className="w-[460px] h-auto drop-shadow-xl ml-[3rem]" />
             </div>
           </div>
           

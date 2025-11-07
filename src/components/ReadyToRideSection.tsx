@@ -133,8 +133,8 @@ const ReadyToRideSection: React.FC = () => {
                   >
                     <LazyLoadImage
                       alt="SawaRI ride tracking interface"
-                      src="https://xnbnrzqbtpvtvwfhvjba.supabase.co/storage/v1/object/public/images//trd.gif"
-                      className="w-48 md:w-80 h-auto object-cover rounded-[2rem] margin-left-8 md:margin-left-9"
+                      src="/assets/27.png"
+                      className="w-88 md:w-420 h-auto object-cover rounded-[2rem] margin-left-8 md:margin-left-9"
                       effect="blur"
                       afterLoad={handleImageLoad}
                       loading="eager"

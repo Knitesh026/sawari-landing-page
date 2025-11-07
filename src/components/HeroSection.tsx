@@ -101,7 +101,7 @@ const HeroSection = () => {
           >
             <LazyLoadImage
               effect="blur"
-              src="/assets/757shots_so.png"
+              src="/assets/24.png"
               alt={t('appInterface')}
               className="w-auto h-420 rounded-3xl transform hover:scale-105 transition-transform duration-500"
             />
